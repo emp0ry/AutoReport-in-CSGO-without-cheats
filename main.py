@@ -6,9 +6,10 @@
 
 # settings
 CSGO_SCREENSHOT_FOLDER_PATH = 'C:\\Program Files (x86)\\Steam\\steamapps\\common\\Counter-Strike Global Offensive\\csgo\\screenshots' # csgo (f5) screenshot folder path
-IS_CSGO_IN_FULLSCREEN = False # If your game is in fullscreen mode change to True
+IS_CSGO_IN_FULLSCREEN = False # if your game is in fullscreen mode change to True
 CSGO_SCREENSHOT_BIND = 'f5' # use (bind "f5" "jpeg screenshot 100") with default bind not working
 BIND_TO_RUN_SCRIPT = 'tab + q' # press tab, click on the player you want to report and press 1 or 2 seconds q
+CSGO_WINDOWS_NAME = 'Counter-Strike: Global Offensive - Direct3D 9' # csgo window name
 
 import time
 import os
@@ -37,9 +38,7 @@ def in_csgo():
 # get csgo resolution
 def csgo_resolution():
     try:
-        csgo_windows_name = 'Counter-Strike: Global Offensive - Direct3D 9'
-
-        hwnd = win32gui.FindWindow(None, csgo_windows_name)
+        hwnd = win32gui.FindWindow(None, CSGO_WINDOWS_NAME)
         left, top, right, bottom = win32gui.GetWindowRect(hwnd)
         width = right - left
         height = bottom - top
