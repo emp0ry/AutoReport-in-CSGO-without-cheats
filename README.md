@@ -21,7 +21,7 @@ IS_CSGO_IN_FULLSCREEN = True
 ### How to use?
 • Run ```main.py``` <br />
 • In the tab, click on the player you want to report and press 1 or 2 seconds ```q``` <br/>
-• If you don't want to ```unmute``` the player, when the script will report the player, release the ```tab```
-
+• If you don't want to ```unmute``` the player, when the script will report the player, release the ```tab``` <br/>
+• **PS: For first time run 3-4 time main.py**
 
 <h3> PS: Tested on resolutions 1920x1080, 1280x1024, 1280x960 <h2/>
