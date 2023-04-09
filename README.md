@@ -1,4 +1,4 @@
-# AutoReport in CS:GO without cheats
+# AutoReport in CS:GO without cheats, ReportBot with Python
 
 ### How to configure?
 In the code, change the path to the folder with screenshots of csgo. (f5 screenshots)
