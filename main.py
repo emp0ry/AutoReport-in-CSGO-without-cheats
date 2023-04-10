@@ -60,7 +60,7 @@ def main():
     if not IS_CSGO_IN_FULLSCREEN:
         while True:
             try:
-                if in_csgo and keyboard.is_pressed('tab + q'):
+                if in_csgo and keyboard.is_pressed(BIND_TO_RUN_SCRIPT):
                     report_button_location = pyautogui.locateOnScreen(path+'\\img\\report.png', grayscale=True, confidence=0.8)
                     if report_button_location is not None and in_csgo():
                         report_button_center = pyautogui.center(report_button_location)
@@ -102,7 +102,7 @@ def main():
             pass
         while True:
             try:
-                if in_csgo and keyboard.is_pressed('tab + q'):
+                if in_csgo and keyboard.is_pressed(BIND_TO_RUN_SCRIPT):
                     try:
                         os.remove(CSGO_SCREENSHOT_FOLDER_PATH+'\\screenshot.jpg')
                     except:
