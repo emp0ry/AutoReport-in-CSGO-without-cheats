@@ -8,7 +8,7 @@
 CSGO_SCREENSHOT_FOLDER_PATH = 'C:\\Program Files (x86)\\Steam\\steamapps\\common\\Counter-Strike Global Offensive\\csgo\\screenshots' # csgo (f5) screenshot folder path
 IS_CSGO_IN_FULLSCREEN = False # if your game is in fullscreen mode change to True
 CSGO_SCREENSHOT_BIND = 'f5' # use (bind "f5" "jpeg screenshot 100") with default bind not working
-BIND_TO_RUN_SCRIPT = 'tab + q' # press tab, click on the player you want to report and press 1 or 2 seconds q
+BIND_TO_RUN_SCRIPT = 'tab + e' # press tab, click on the player you want to report and press 1 or 2 seconds q
 CSGO_WINDOWS_NAME = 'Counter-Strike: Global Offensive - Direct3D 9' # csgo window name
 
 import time
