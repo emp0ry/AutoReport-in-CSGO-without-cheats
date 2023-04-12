@@ -6,7 +6,7 @@
 
 # settings
 CSGO_SCREENSHOT_FOLDER_PATH = 'C:\\Program Files (x86)\\Steam\\steamapps\\common\\Counter-Strike Global Offensive\\csgo\\screenshots' # csgo (f5) screenshot folder path
-IS_CSGO_IN_FULLSCREEN = False # if your game is in fullscreen mode change to True
+IS_CSGO_IN_FULLSCREEN = True # if your game is in fullscreen mode change to True
 CSGO_SCREENSHOT_BIND = 'f5' # use (bind "f5" "jpeg screenshot 100") with default bind not working
 BIND_TO_RUN_SCRIPT = 'tab + e' # press tab, click on the player you want to report and press 1 or 2 seconds e
 CSGO_WINDOWS_NAME = 'Counter-Strike: Global Offensive - Direct3D 9' # csgo window name
@@ -16,7 +16,7 @@ import sys
 import os
 
 try: import win32process
-except: os.system("pip install pywin32");  import win32process
+except: os.system("pip install pywin32");  os.system("pip install Pillow"); os.system("pip install opencv-python");  import win32process
 try: import pyautogui
 except: os.system("pip install pyautogui"); import pyautogui
 try: import keyboard
@@ -61,7 +61,7 @@ def main():
     if not IS_CSGO_IN_FULLSCREEN:
         while True:
             try:
-                if in_csgo and keyboard.is_pressed(BIND_TO_RUN_SCRIPT):
+                if in_csgo() and keyboard.is_pressed(BIND_TO_RUN_SCRIPT):
                     report_button_location = pyautogui.locateOnScreen(path+'\\img\\report.png', grayscale=True, confidence=0.8)
                     if report_button_location is not None and in_csgo():
                         report_button_center = pyautogui.center(report_button_location)
@@ -103,7 +103,7 @@ def main():
             pass
         while True:
             try:
-                if in_csgo and keyboard.is_pressed(BIND_TO_RUN_SCRIPT):
+                if in_csgo() and keyboard.is_pressed(BIND_TO_RUN_SCRIPT):
                     try:
                         os.remove(CSGO_SCREENSHOT_FOLDER_PATH+'\\screenshot.jpg')
                     except:
