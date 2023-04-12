@@ -12,12 +12,13 @@ BIND_TO_RUN_SCRIPT = 'tab + e' # press tab, click on the player you want to repo
 CSGO_WINDOWS_NAME = 'Counter-Strike: Global Offensive - Direct3D 9' # csgo window name
 
 import time
+import sys
 import os
 
 try: import win32process
 except: os.system("pip install pywin32");  import win32process
 try: import pyautogui
-except: os.system("pip install keyboard"); import pyautogui
+except: os.system("pip install pyautogui"); import pyautogui
 try: import keyboard
 except: os.system("pip install keyboard"); import keyboard
 try: import win32gui
@@ -156,4 +157,5 @@ def main():
 
 if __name__ == '__main__':
     path = os.path.dirname(__file__)
+    sys.setrecursionlimit(10000) # without it the code crashes
     main()
